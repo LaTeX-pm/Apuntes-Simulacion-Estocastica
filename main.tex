@@ -1,0 +1,42 @@
+% Tiene dos configuraciones extras: "twoside", para diferenciar las páginas pares de las impares, y "marginnote", para poder activar las notas al margen.
+\documentclass[marginnote,twoside]{notebookFMG}
+% \documentclass[]{book}
+
+\usepackage{lipsum}
+% Paquete de creación propia. Carga los entornos de los teoremas. Tiene la opción de mostrar colores en el nombre del teorema, si es que se le entrega la opción de "color".
+\usepackage[color]{pkg/theoremenvFMG}
+%Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
+\usepackage[Lenny]{fncychap}
+
+%% Datos de la portada
+\def\tituloportada {Nuevo Titulo de la Portada}
+\def\autordeldocumento {Francisco Muñoz Guajardo}
+\def\repositorio {github.com/LaTeX-pm/Template-Apuntes}
+\def\fecha {\today}
+\def\nombredelcurso {Curso ultra bkn}
+\def\codigodelcurso {CO-1234}
+\def\nombreuniversidad {Universidad de Chile}
+\def\nombrefacultad {Facultad de Ciencias Físicas y Matemáticas}
+\def\departamentouniversidad {Departamento de la Universidad}
+
+% Si se desea cambiar la tabla de la portada
+\renewcommand{\tablaautor}{
+    \begin{tabular}{ll}
+        Autor: & \autordeldocumento \\
+        Repositorio: & \repositorio \\
+        Fecha: & \fecha \\
+    \end{tabular}
+}
+
+\begin{document}
+% Creación de la portada
+\portada
+
+% Creación de la tabla de contenidos
+\indice
+
+% Configuraciones para el contenido
+\contenidoconfig
+
+\input{example}
+\end{document}
