@@ -77,7 +77,7 @@
     \def\pagemarginleft {2.0}
     \def\pagemarginright {5.0}
     \def\pagemarginnote {4.0}
-    \def\pagemarginnotesep {-0.5}
+    \def\pagemarginnotesep {0.5}
 }{}
 
 \newcommand{\header}{% Comando que crea el header
